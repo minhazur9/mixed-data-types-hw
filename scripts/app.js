@@ -144,7 +144,7 @@ const crazyObject = {
 
 console.log(findName("funkhauser"));
 
-Object-ception
+//Object-ception
 
 const inception = {
   reality: {
