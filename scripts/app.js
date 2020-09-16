@@ -123,26 +123,12 @@ const crazyObject = {
   console.log(crazyObject.larry.characters[2].favourtieHobby);
   console.log(crazyObject.larry.nicknames[1]);
 
-  function findName(name) {
-  for(const property in crazyObject) {
-      if(property === "larry"){
-          const larryObj = crazyObject[property];
-          for(const larryProp in larryObj){
-              if(larryProp === "characters"){
-                  const larryChar = larryObj[larryProp];
-                  for(let i = 0; i < larryChar.length; i++){
-                      if(larryChar[i].name === name){
-                          return larryChar[i];
-                      }
-                  }
-              }
-          }
-          
-      }
+  const characterArr = crazyObject.larry.characters;
+  for(let i = 0; i < characterArr.length; i++ ) {
+    if(characterArr[i].name === 'funkhauser') {
+      console.log(characterArr[i]);
+    }
   }
-}
-
-console.log(findName("funkhauser"));
 
 //Object-ception
 
