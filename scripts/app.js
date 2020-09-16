@@ -196,8 +196,18 @@ const bondFilms = [
   { "title" : "License to Kill", "year" : 1989, "actor" : "Timothy Dalton", "gross" : "$285,157,191" }
 ];
 
-const bondTitles = [];
+// const bondTitles = [];
+// for(let i = 0; i < bondFilms.length; i++) {
+//   bondTitles[i] = bondFilms[i].title
+// }
+// console.log(bondTitles);
+
+let gross = 0;
 for(let i = 0; i < bondFilms.length; i++) {
-  bondTitles[i] = bondFilms[i].title
+  gross += Number(bondFilms[i].gross.replace(/[$,]/g,""));
 }
-console.log(bondTitles);
+console.log(gross);
+
+
+
+
